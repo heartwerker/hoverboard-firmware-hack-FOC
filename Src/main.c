@@ -313,7 +313,7 @@ int main(void) {
           }
         }
       #endif
-
+  
       // ####### LOW-PASS FILTER #######
       rateLimiter16(input1[inIdx].cmd, rate, &steerRateFixdt);
       rateLimiter16(input2[inIdx].cmd, rate, &speedRateFixdt);

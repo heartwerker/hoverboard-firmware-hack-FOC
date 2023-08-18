@@ -146,6 +146,8 @@ void DMA1_Channel1_IRQHandler(void) {
       HAL_GPIO_WritePin(BUZZER_PORT, BUZZER_PIN, GPIO_PIN_RESET);
       buzzerPrev = 0;
   }
+  
+  HAL_GPIO_WritePin(BUZZER_PORT, BUZZER_PIN, 0); // buzzer not so loud anymore
 
   // Adjust pwm_margin depending on the selected Control Type
   if (rtP_Left.z_ctrlTypSel == FOC_CTRL) {
